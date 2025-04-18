@@ -2,6 +2,12 @@
 name = "hyperwood"
 version = "0.1.0"
 edition = "2024"
+license = "Apache-2.0"
+description = "Hyperwood is an open-source system for crafting furniture from simple wooden slats."
+documentation = "https://docs.rs/hyperwood/latest/hyperwood/"
+homepage = "https://github.com/jo/hyperwood"
+repository = "https://github.com/jo/hyperwood"
+authors = ["Johannes J. Schmidt <schmidt@tf-fabrik.de>"]
 
 [[bin]]
 name = "hef"
