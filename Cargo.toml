@@ -1,0 +1,13 @@
+[package]
+name = "hyperwood"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "hef"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5.36", features = ["derive"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
