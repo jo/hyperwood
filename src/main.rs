@@ -22,7 +22,6 @@ fn reader_from_file_or_stdin(filename: &Option<PathBuf>) -> Box<dyn Read> {
     long_about = "With the HEF CLI, you can generate BOMs (Bill of Material) for given HEF
     file, and other HEF related tasks."
 )]
-
 pub struct Args {
     #[clap(subcommand)]
     pub command: Commands,
