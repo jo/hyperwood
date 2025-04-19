@@ -4,6 +4,13 @@ Hyperwood is an open-source system for crafting furniture from simple wooden sla
 
 Algorithms automatically generate personalized construction plans and optimized material lists, making building accessible, sustainable, and waste-efficient.
 
+
+## Designs
+
+* [hyperwood-bench](https://github.com/jo/hyperwood-bench): Our simplistic yet elegant bench is the first-ever Hyperwood design, embodying the project's essence of simplicity, functionality, and aesthetic clarity.
+* [hyperwood-trough](https://github.com/jo/hyperwood-trough): This versatile trough demonstrates Hyperwood’s capability to create curved forms from straight slats—perfect as a plant container or decorative piece.
+
+
 ## Hyperwood Exchange Format (HEF)
 
 Inspired by the [Qubicle Exchange Format](https://getqubicle.com/qubicle/documentation/docs/file/qef/), the Hyperwood Exchange Format (HEF) is the dedicated file structure for the Hyperwood ecosystem. While the Qubicle format is voxel-based, HEF uses lines as its primitives, reflecting the structural essence of Hyperwood’s slat-based construction. HEF facilitates seamless data exchange between various software and applications, functioning as a standardized protocol for Hyperwood.
