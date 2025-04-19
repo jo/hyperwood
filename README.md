@@ -5,11 +5,11 @@ Hyperwood is an open-source system for crafting furniture from simple wooden sla
 Algorithms automatically generate personalized construction plans and optimized material lists, making building accessible, sustainable, and waste-efficient.
 
 
-## Designs
-
+## Our Designs
 * [hyperwood-bench](https://github.com/jo/hyperwood-bench): Our simplistic yet elegant bench is the first-ever Hyperwood design, embodying the project's essence of simplicity, functionality, and aesthetic clarity.
 * [hyperwood-trough](https://github.com/jo/hyperwood-trough): This versatile trough demonstrates Hyperwood’s capability to create curved forms from straight slats—perfect as a plant container or decorative piece.
 
+Discover more Hyperwood designs on crates.io by following the [#hyperwood-design](https://crates.io/keywords/hyperwood-design) keyword.
 
 ## Hyperwood Exchange Format (HEF)
 

@@ -1,6 +1,6 @@
 [package]
 name = "hyperwood"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2024"
 license = "Apache-2.0"
 description = "Hyperwood is an open-source system for crafting furniture from simple wooden slats."
