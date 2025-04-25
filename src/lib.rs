@@ -309,3 +309,80 @@ impl<
             .sum()
     }
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde_json::json;
+    use serde_json::Value;
+
+    static BASIC_HEF: &'static str = "Hyperwood Exchange Format
+Version 1
+hyperwood.org
+Base Model
+{\"a_parameter\":1.1}
+{\"x\":2.1,\"y\":2.2,\"z\":2.3}
+{\"a_property\":3.1}
+1
+Base Group
+4.1 4.2 4.3 5.1 5.2 5.3 6 0
+";
+
+    #[test]
+    fn test_parse_basic_hef() {
+        let model: Model<Value, Value> = Model::from_hef(BASIC_HEF.as_bytes());
+
+        assert_eq!(model.name, "Base Model");
+
+        assert_eq!(model.parameters["a_parameter"], 1.1);
+
+        assert_eq!(model.variant.x, 2.1);
+        assert_eq!(model.variant.y, 2.2);
+        assert_eq!(model.variant.z, 2.3);
+
+        assert_eq!(model.properties["a_property"], 3.1);
+
+        assert_eq!(model.slats.len(), 1);
+
+        let slat = &model.slats[0];
+        assert_eq!(slat.origin.x, 4.1);
+        assert_eq!(slat.origin.y, 4.2);
+        assert_eq!(slat.origin.z, 4.3);
+        assert_eq!(slat.vector.x, 5.1);
+        assert_eq!(slat.vector.y, 5.2);
+        assert_eq!(slat.vector.z, 5.3);
+        assert_eq!(slat.layer, 6);
+        assert_eq!(slat.name, "Base Group");
+    }
+
+    #[test]
+    fn test_basic_model_to_hef() {
+        let model = Model {
+            parameters: json!({ "a_parameter": 1.1 }),
+            properties: json!({ "a_property": 3.1 }),
+            name: "Base Model".to_string(),
+            variant: Variant {
+                x: 2.1,
+                y: 2.2,
+                z: 2.3,
+            },
+            slats: vec![Slat {
+                name: "Base Group".to_string(),
+                layer: 6,
+                origin: Point {
+                    x: 4.1,
+                    y: 4.2,
+                    z: 4.3,
+                },
+                vector: Vector {
+                    x: 5.1,
+                    y: 5.2,
+                    z: 5.3,
+                }
+            }],
+        };
+        
+        assert_eq!(model.to_hef(), BASIC_HEF);
+    }
+}
