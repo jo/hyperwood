@@ -56,7 +56,7 @@ HEF uses an indexed part map that contains all part names used in the following 
 4
 ```
 
-The following lines store the individual part names (in this case 3). Names must not be longer than 32 characters.
+The following lines store the individual part names (in this case 4). Names must not be longer than 32 characters.
 ```
 Shelf
 Seat
